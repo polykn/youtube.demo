@@ -159,11 +159,11 @@ uint32_t miscCalenderToUnix(uint8_t Year, uint8_t Month, uint8_t Day, uint8_t Ho
 		days++;
 
 	unix += (uint32_t)Seconds;
-	unix +=	(uint32_t)((uint32_t)Minute*60);
-	unix += (uint32_t)((uint32_t)Hour*3600);
-	unix += (uint32_t)(((uint32_t)Day-1)*86400);
-	unix += (uint32_t)((uint32_t)days*86400);
-	unix += (uint32_t)((((uint32_t)Year+addyears)-1970)*31536000);
+	//unix +=	(uint32_t)((uint32_t)Minute*60);
+	//unix += (uint32_t)((uint32_t)Hour*3600);
+	//unix += (uint32_t)(((uint32_t)Day-1)*86400);
+	//unix += (uint32_t)((uint32_t)days*86400);
+	//unix += (uint32_t)((((uint32_t)Year+addyears)-1970)*31536000);
 
 	for(cnt_i=1970;cnt_i<(Year+addyears);cnt_i++) // Calculate leapyears
 	{
