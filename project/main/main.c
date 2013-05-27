@@ -2,6 +2,8 @@
 #include "util.h"
 #include <time.h>
 
+// Uplloaded files to github.com, YAY!!
+
 #define YEAR_TO_DAYS(y) ((y)*365 + (y)/4 - (y)/100 + (y)/400)
 
 #define uint8_t unsigned char
