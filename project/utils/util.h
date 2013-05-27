@@ -1,8 +1,7 @@
 #ifndef _UTIL_H
 #define _UTIL_H
 
-#define uint32_t unsigned long
-#define uint8_t unsigned char
+#include "defs.h"
 
 typedef struct
 {

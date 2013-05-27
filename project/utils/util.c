@@ -143,8 +143,9 @@ void untime(unsigned long unixtime, CalenderData_TypeDef *Cal)
 
 uint32_t miscCalenderToUnix(uint8_t Year, uint8_t Month, uint8_t Day, uint8_t Hour, uint8_t Minute, uint8_t Seconds)
 {
-	uint32_t unix = 0;
+
 	uint32_t cnt_i = 0;
+	uint32_t unixvar = 0;
 	uint32_t days = 0;
 	uint32_t addyears = 0;
 	
@@ -158,19 +159,19 @@ uint32_t miscCalenderToUnix(uint8_t Year, uint8_t Month, uint8_t Day, uint8_t Ho
 	if(Month>2 && !((Year+addyears)%4)) // If current year is leap year, add a day
 		days++;
 
-	unix += (uint32_t)Seconds;
-	//unix +=	(uint32_t)((uint32_t)Minute*60);
-	//unix += (uint32_t)((uint32_t)Hour*3600);
-	//unix += (uint32_t)(((uint32_t)Day-1)*86400);
-	//unix += (uint32_t)((uint32_t)days*86400);
-	//unix += (uint32_t)((((uint32_t)Year+addyears)-1970)*31536000);
+	unixvar += (uint32_t)Seconds;
+	unixvar +=	(uint32_t)((uint32_t)Minute*60);
+	unixvar += (uint32_t)((uint32_t)Hour*3600);
+	unixvar += (uint32_t)(((uint32_t)Day-1)*86400);
+	unixvar += (uint32_t)((uint32_t)days*86400);
+	unixvar += (uint32_t)((((uint32_t)Year+addyears)-1970)*31536000);
 
 	for(cnt_i=1970;cnt_i<(Year+addyears);cnt_i++) // Calculate leapyears
 	{
 		if(!(cnt_i%4))
-			unix+=86400;
+			unixvar+=86400;
 	}
 
-	return unix;
+	return unixvar;
 }
 

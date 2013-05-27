@@ -1,5 +1,7 @@
-#include <stdio.h>
+
 #include "util.h"
+#include <stdio.h>
+
 #include <time.h>
 
 // Uplloaded files to github.com, YAY!!

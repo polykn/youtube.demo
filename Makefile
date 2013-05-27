@@ -1,9 +1,6 @@
-# http://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html
-# This is an example Makefile for a countwords program.  This
-# program uses both the scanner module and a counter module.
-# Typing 'make' or 'make count' will create the executable file.
+# This is mys small project for testing C-Code and Makefile
+#	Kristian Nielsen - poly-control
 #
-
 # define some Makefile variables for the compiler and compiler flags
 # to use Makefile variables later in the Makefile: $()
 #
@@ -83,10 +80,6 @@ createdirs :
 clean: 
 	$(RM) $(OBJ) $(PROJECT).exe 
 	@rm -fr $(LIB)
-	
-	
-
-
 	
 	
 #tester : main.c
